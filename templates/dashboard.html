@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include your custom CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Your Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Welcome, {{ . }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-4">Welcome, {{ . }}</h1>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card dashboard-content">
+                    <div class="card-body">
+                        <h5 class="card-title">Call Reporting</h5>
+                        <p>View your recent telephone call reports and statistics:</p>
+                        <ul>
+                            <li>Call Date: September 1, 2023</li>
+                            <li>Caller: John Smith</li>
+                            <li>Call Duration: 12 minutes</li>
+                            <li>Call Type: Incoming</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card dashboard-content">
+                    <div class="card-body">
+                        <h5 class="card-title">Payment Gateway</h5>
+                        <p>Payment processing forms and information.</p>
+                        <form class="payment-form">
+                            <div class="form-group">
+                                <label for="amount">Amount:</label>
+                                <input type="text" id="amount" name="amount" class="form-control" placeholder="Enter amount">
+                            </div>
+                            <div class="form-group">
+                                <label for="card-number">Card Number:</label>
+                                <input type="text" id="card-number" name="card-number" class="form-control" placeholder="Enter card number">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="expiry">Expiry Date:</label>
+                                    <input type="text" id="expiry" name="expiry" class="form-control" placeholder="MM/YYYY">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="cvv">CVV:</label>
+                                    <input type="text" id="cvv" name="cvv" class="form-control" placeholder="Enter CVV">
+                                </div>
+                            </div>
+                            <input type="submit" class="btn btn-success btn-block pay-now-btn" value="Pay Now">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="card dashboard-content">
+                    <div class="card-body">
+                        <h5 class="card-title">PBX Tools</h5>
+                        <p>Interactive voice response (IVR) and call queues.</p>
+                        <p>Manage your PBX tools, including IVR and Queues:</p>
+                        <ul>
+                            <li>Configure IVR menus for automated call routing.</li>
+                            <li>Create and manage call queues for efficient call handling.</li>
+                            <li>Customize call routing based on business hours.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional sections -->
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card dashboard-content">
+                    <div class="card-body">
+                        <h5 class="card-title">Other Information</h5>
+                        <p>Explore other useful information and tools:</p>
+                        <ul>
+                            <li>Item 1: Lorem ipsum dolor sit amet.</li>
+                            <li>Item 2: Consectetur adipiscing elit.</li>
+                            <li>Item 3: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card dashboard-content">
+                    <div class="card-body">
+                        <h5 class="card-title">User Management</h5>
+                        <p>Manage user accounts and permissions:</p>
+                        <ul>
+                            <li>Create and update user profiles.</li>
+                            <li>Assign roles and access rights.</li>
+                            <li>Reset passwords and manage user authentication.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card dashboard-content">
+                    <div class="card-body">
+                        <h5 class="card-title">Queues</h5>
+                        <p>Manage call queues for efficient call handling:</p>
+                        <ul>
+                            <li>View queue statistics and call distribution.</li>
+                            <li>Add or remove agents from queues.</li>
+                            <li>Set queue priorities and routing rules.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

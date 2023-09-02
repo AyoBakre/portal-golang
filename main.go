@@ -17,7 +17,7 @@ var (
 
 func main() {
 	r := mux.NewRouter()
-	r.HandleFunc("/", loginHandler)
+	r.HandleFunc("/", signupHandler)
 	r.HandleFunc("/login", loginHandler)
 	r.HandleFunc("/signup", signupHandler)
 	r.HandleFunc("/dashboard", dashboardHandler)
